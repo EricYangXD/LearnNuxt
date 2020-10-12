@@ -1,0 +1,52 @@
+[
+  {
+    "name": "layout",
+    "path": "/",
+    "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/layout",
+    "children": [
+      {
+        "name": "home",
+        "path": "",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/home",
+        "_name": "_a995d6e4"
+      },
+      {
+        "name": "login",
+        "path": "/login",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/login",
+        "_name": "_88b474cc"
+      },
+      {
+        "name": "register",
+        "path": "/register",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/login",
+        "_name": "_88b474cc"
+      },
+      {
+        "name": "article",
+        "path": "/article/:slug",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/article",
+        "_name": "_293bdae7"
+      },
+      {
+        "name": "settings",
+        "path": "/settings",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/settings",
+        "_name": "_c5fd275c"
+      },
+      {
+        "name": "profile",
+        "path": "/profile/:username",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/profile",
+        "_name": "_4271979a"
+      },
+      {
+        "name": "editor",
+        "path": "/editor",
+        "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/editor",
+        "_name": "_a6f1dd48"
+      }
+    ],
+    "_name": "_8f5429ce"
+  }
+]
