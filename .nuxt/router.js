@@ -30,7 +30,6 @@ export const routerOptions = {
   routes: [{
     path: "/",
     component: _8f5429ce,
-    name: "layout",
     children: [{
       path: "",
       component: _a995d6e4,

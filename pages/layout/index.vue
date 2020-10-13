@@ -2,49 +2,53 @@
  * @Author: Eric YangXinde
  * @Date: 2020-10-12 14:06:23
  * @LastModifiedBy: Eric YangXinde
- * @LastEditTime: 2020-10-12 16:46:05
+ * @LastEditTime: 2020-10-13 18:17:59
  * @Description: 
 -->
 <template>
 	<div id="layout">
 		<nav class="navbar navbar-light">
 			<div class="container">
-				<!-- <a class="navbar-brand" href="index.html">conduit</a> -->
 				<nuxt-link class="navbar-brand" to="/">conduit</nuxt-link>
 
 				<ul class="nav navbar-nav pull-xs-right">
 					<li class="nav-item">
-						<!-- Add "active" class when you're on that page" -->
-						<!-- <a class="nav-link active" href="">Home</a> -->
 						<nuxt-link class="nav-link" to="/" exact
 							>Home</nuxt-link
 						>
 					</li>
-					<li class="nav-item">
-						<nuxt-link class="nav-link" to="/editor">
-							<i class="ion-compose"></i>&nbsp;New Post
-						</nuxt-link>
-					</li>
-					<li class="nav-item">
-						<nuxt-link class="nav-link" to="/settings">
-							<i class="ion-gear-a"></i>&nbsp;Settings
-						</nuxt-link>
-					</li>
-					<li class="nav-item">
-						<nuxt-link class="nav-link" to="/register"
-							>Sign up</nuxt-link
-						>
-					</li>
-					<li class="nav-item">
-						<!-- <li class="nav-item" v-if="isLogin"> -->
-						<nuxt-link to="/profile/:username" class="nav-link">
-							<img
-								class="user-pic"
-								src="http://i.imgur.com/Qr71crq.jpg"
-							/>
-							EricYangXD
-						</nuxt-link>
-					</li>
+					<template v-if="user">
+						<li class="nav-item">
+							<nuxt-link class="nav-link" to="/editor">
+								<i class="ion-compose"></i>&nbsp;New Post
+							</nuxt-link>
+						</li>
+						<li class="nav-item">
+							<nuxt-link class="nav-link" to="/settings">
+								<i class="ion-gear-a"></i>&nbsp;Settings
+							</nuxt-link>
+						</li>
+
+						<li class="nav-item">
+							<nuxt-link to="/profile/:username" class="nav-link">
+								<img class="user-pic" :src="user.image" />
+								{{ user.username }}
+							</nuxt-link>
+						</li>
+					</template>
+
+					<template v-else>
+						<li class="nav-item">
+							<nuxt-link class="nav-link" to="/login"
+								>Sign in</nuxt-link
+							>
+						</li>
+						<li class="nav-item">
+							<nuxt-link class="nav-link" to="/register"
+								>Sign up</nuxt-link
+							>
+						</li>
+					</template>
 				</ul>
 			</div>
 		</nav>
@@ -67,6 +71,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
 	name: "LayoutIndex",
 	data() {
@@ -80,7 +85,9 @@ export default {
 	mounted() {},
 	beforeDestroy() {},
 	watch: {},
-	computed: {},
+	computed: {
+		...mapState(["user"]),
+	},
 };
 </script>
 

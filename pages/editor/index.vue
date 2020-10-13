@@ -2,7 +2,7 @@
  * @Author: Eric YangXinde
  * @Date: 2020-10-12 14:59:37
  * @LastModifiedBy: Eric YangXinde
- * @LastEditTime: 2020-10-12 14:59:44
+ * @LastEditTime: 2020-10-13 18:26:28
  * @Description: 
 -->
 <template>
@@ -57,6 +57,8 @@
 
 <script>
 export default {
+	// 在路由匹配组件渲染之前会先执行中间件处理逻辑
+	middleware: "auth",
 	name: "",
 	data() {
 		return {};

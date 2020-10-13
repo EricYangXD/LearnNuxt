@@ -2,7 +2,7 @@
  * @Author: Eric YangXinde
  * @Date: 2020-10-12 14:11:14
  * @LastModifiedBy: Eric YangXinde
- * @LastEditTime: 2020-10-12 16:44:30
+ * @LastEditTime: 2020-10-13 14:28:18
  * @Description:
  */
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
 			routes.push(
 				...[
 					{
-						name: "layout",
+						// name: "layout",
 						path: "/", // 整体输出页面
 						component: resolve(__dirname, "./pages/layout/"),
 						children: [

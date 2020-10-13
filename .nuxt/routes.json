@@ -1,6 +1,5 @@
 [
   {
-    "name": "layout",
     "path": "/",
     "component": "/Users/eric/workspace/geektime/LearnNuxt/pages/layout",
     "children": [

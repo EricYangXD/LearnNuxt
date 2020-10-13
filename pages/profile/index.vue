@@ -104,7 +104,9 @@
 
 <script>
 export default {
-	name: "",
+	// 在路由匹配组件渲染之前会先执行中间件处理逻辑
+	middleware: "auth",
+	name: "ProfileIndex",
 	data() {
 		return {};
 	},
